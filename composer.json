@@ -1,0 +1,21 @@
+{
+    "name": "noopstudios/marketingsms",
+    "description": "MarketingSMS Notifications Channel for Laravel",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "7.5"
+    },
+    "license": "MIT Licence",
+    "autoload": {
+        "psr-4": {
+            "Noopstudios\\Marketingsms\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Noop",
+            "email": "dev@noop.pt"
+        }
+    ]
+}
