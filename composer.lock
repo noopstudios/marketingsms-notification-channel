@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b6ad934d4436dd32645709a34888ebf",
+    "content-hash": "92f53a20338805e102d8f8f14225a294",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -336,6 +336,48 @@
                 }
             ],
             "time": "2022-10-26T14:07:24+00:00"
+        },
+        {
+            "name": "noopstudios/marketingsms-php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noopstudios/marketingsms-php.git",
+                "reference": "dd9461856c0cd32060e7bdc135acbcf9184079f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noopstudios/marketingsms-php/zipball/dd9461856c0cd32060e7bdc135acbcf9184079f5",
+                "reference": "dd9461856c0cd32060e7bdc135acbcf9184079f5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Noopstudios\\MarketingsmsPhp\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Noop",
+                    "email": "dev@noop.pt"
+                }
+            ],
+            "description": "An easy to use PHP Class for sending SMS with MarketingSMS API.",
+            "support": {
+                "issues": "https://github.com/noopstudios/marketingsms-php/issues",
+                "source": "https://github.com/noopstudios/marketingsms-php/tree/1.0.0"
+            },
+            "time": "2023-03-09T16:09:44+00:00"
         },
         {
             "name": "psr/http-client",
