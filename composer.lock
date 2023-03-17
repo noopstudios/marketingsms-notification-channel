@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2449bed67c8577c85f2be68c1e6b751",
+    "content-hash": "dc6833d881d1d01d7db23f13fcbc9c22",
     "packages": [
         {
             "name": "brick/math",
@@ -586,16 +586,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.3",
+            "version": "2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "67c26b443f348a51926030c83481b85718457d3d"
+                "reference": "3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
-                "reference": "67c26b443f348a51926030c83481b85718457d3d",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
+                "reference": "3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
                 "shasum": ""
             },
             "require": {
@@ -685,7 +685,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.4.3"
+                "source": "https://github.com/guzzle/psr7/tree/2.4.4"
             },
             "funding": [
                 {
@@ -701,7 +701,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-26T14:07:24+00:00"
+            "time": "2023-03-09T13:19:02+00:00"
         },
         {
             "name": "illuminate/broadcasting",
@@ -2172,16 +2172,16 @@
         },
         {
             "name": "noopstudios/marketingsms-php",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/noopstudios/marketingsms-php.git",
-                "reference": "dd9461856c0cd32060e7bdc135acbcf9184079f5"
+                "reference": "6818f6fe31c3e144450ddc8ef30a01e3c0800137"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/noopstudios/marketingsms-php/zipball/dd9461856c0cd32060e7bdc135acbcf9184079f5",
-                "reference": "dd9461856c0cd32060e7bdc135acbcf9184079f5",
+                "url": "https://api.github.com/repos/noopstudios/marketingsms-php/zipball/6818f6fe31c3e144450ddc8ef30a01e3c0800137",
+                "reference": "6818f6fe31c3e144450ddc8ef30a01e3c0800137",
                 "shasum": ""
             },
             "require": {
@@ -2208,9 +2208,9 @@
             "description": "An easy to use PHP Class for sending SMS with MarketingSMS API.",
             "support": {
                 "issues": "https://github.com/noopstudios/marketingsms-php/issues",
-                "source": "https://github.com/noopstudios/marketingsms-php/tree/1.0.0"
+                "source": "https://github.com/noopstudios/marketingsms-php/tree/1.0.1"
             },
-            "time": "2023-03-09T16:09:44+00:00"
+            "time": "2023-03-17T09:57:03+00:00"
         },
         {
             "name": "nunomaduro/termwind",

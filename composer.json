@@ -5,7 +5,7 @@
     "require": {
         "php": ">=7.4",
         "guzzlehttp/guzzle": "7.5",
-        "noopstudios/marketingsms-php": "^1.0",
+        "noopstudios/marketingsms-php": ">=1.0",
         "illuminate/notifications": "^10.3"
     },
     "license": "MIT Licence",

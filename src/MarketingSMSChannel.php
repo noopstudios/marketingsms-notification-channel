@@ -29,7 +29,7 @@ class MarketingSMSChannel
 
         $message = $notification->toMarketingSMS($notifiable);
 
-        if(is_string($message)){
+        if(is_array($message)){
             $message = new MarketingSMSMessage($message);
         }
 
@@ -38,14 +38,13 @@ class MarketingSMSChannel
         }
 
         $response = $this->client->sendMessage([
-            'name' => $message->name,
-            'message' => $message->message,
-            'from' => $message->from ?? config('marketing_sms.from'),
-            'delivered_at' => $message->deliveredAt ?? null,
-            'phones' => $message->phones,
+            'name' => $message->getName(),
+            'message' => $message->getMessage(),
+            'from' => $message->getFrom() ?? config('marketing_sms.from'),
+            'delivered_at' => $message->getDeliveredAt() ?? null,
+            'phones' => $message->getPhones(),
         ]);
 
-        $response = $this->client->sendMessage($message);
         if ($response->getResponseCode() != 200) {
             throw Exceptions\CloudNotSendNotification::marketingSMSError($response->getCleanResponse(), $response->getResponseCode());
         }

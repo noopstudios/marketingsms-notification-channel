@@ -46,13 +46,13 @@ class MarketingSMSMessage
      * @param $deliveredAt
      * @param $phones
      */
-    public function __construct($name, $message, $from, $deliveredAt, $phones)
+    public function __construct(array $messageDetails)
     {
-        $this->name = $name;
-        $this->message = $message;
-        $this->from = $from;
-        $this->deliveredAt = $deliveredAt;
-        $this->phones = $phones;
+        $this->name = $messageDetails['name'];
+        $this->message = $messageDetails['message'];
+        $this->from = $messageDetails['from'];
+        $this->deliveredAt = $messageDetails['deliveredAt'];
+        $this->phones = $messageDetails['phones'];
     }
 
     /**
@@ -82,9 +82,9 @@ class MarketingSMSMessage
     /**
      * @param string $deliveredAt
      */
-    public function setDeliveredAt($deliveredAt)
+    public function getDeliveredAt()
     {
-        $this->deliveredAt = $deliveredAt;
+        return $this->deliveredAt;
     }
 
     /**
