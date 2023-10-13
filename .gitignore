@@ -24,3 +24,6 @@ Homestead.json
 
 #IDE PHPStorm
 .idea/*
+/tests/coverage/
+/phpunit.xml.bak
+/.phpunit.cache/

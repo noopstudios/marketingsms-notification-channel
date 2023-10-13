@@ -80,7 +80,7 @@ class MarketingSMSMessage
     }
 
     /**
-     * @param string $deliveredAt
+     * @return string
      */
     public function getDeliveredAt()
     {

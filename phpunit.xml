@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.4/phpunit.xsd" backupGlobals="false" colors="true" bootstrap="vendor/autoload.php" cacheDirectory=".phpunit.cache">
+  <coverage>
+    <report>
+      <html outputDirectory="tests/coverage"/>
+    </report>
+  </coverage>
+  <testsuites>
+    <testsuite name="MarketingSMS Test Suite">
+      <directory suffix="Test.php">tests/</directory>
+    </testsuite>
+  </testsuites>
+  <logging/>
+  <source>
+    <include>
+      <directory suffix=".php">src/</directory>
+    </include>
+  </source>
+</phpunit>

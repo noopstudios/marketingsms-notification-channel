@@ -5,6 +5,7 @@ namespace Noopstudios\MarketingSMS;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\MarketingSMS\Exceptions;
 use Noopstudios\MarketingSMS\marketingSMS;
+use NotificationsChannels\MarketingSMS\Exceptions\InvalidPhoneNumber;
 
 class MarketingSMSChannel
 {
@@ -17,14 +18,12 @@ class MarketingSMSChannel
 
     public function send($notifiable, Notification $notification): void
     {
-        $phones = $notifiable->routeNotificationFor('marketingSMS');
+        $message = $notification->toMarketingSMS($notifiable);
 
-        if (!$phones) {
-            $phones = $notifiable->routeNotificationFor(MarketingSMSChannel::class);
-        }
+        $phones = $this->getTo($notifiable, $notification, $message);
 
-        if (!$phones) {
-            return;
+        if (empty($phones)) {
+            throw InvalidPhoneNumber::configurationNotSet();
         }
 
         $message = $notification->toMarketingSMS($notifiable);
@@ -34,7 +33,7 @@ class MarketingSMSChannel
         }
 
         if(! $message instanceof MarketingSMSMessage){
-            return;
+            throw Exceptions\InvalidConfiguration::configurationNotSet();
         }
 
         $response = $this->client->sendMessage([
@@ -45,8 +44,29 @@ class MarketingSMSChannel
             'phones' => $message->getPhones(),
         ]);
 
-        if ($response->getResponseCode() != 200) {
-            throw Exceptions\CloudNotSendNotification::marketingSMSError($response->getCleanResponse(), $response->getResponseCode());
+        if ($response['success'] != 200) {
+            throw Exceptions\CouldNotSendNotification::marketingSMSError($response->getCleanResponse(), $response->getResponseCode());
         }
+    }
+
+    private function getTo($notifiable, Notification $notification, MarketingSMSMessage $message)
+    {
+        if (! empty($message->getPhones())) {
+            return $message->getPhones();
+        }
+
+        if ($notifiable->routeNotificationFor(static::class, $notification)) {
+            return $notifiable->routeNotificationFor(static::class, $notification);
+        }
+
+        if ($notifiable->routeNotificationFor('marketingsms', $notification)) {
+            return $notifiable->routeNotificationFor('marketingsms', $notification);
+        }
+
+        if (isset($notifiable->phones)) {
+            return $notifiable->phones;
+        }
+
+        throw Exceptions\CouldNotSendNotification::invalidReceiver();
     }
 }
