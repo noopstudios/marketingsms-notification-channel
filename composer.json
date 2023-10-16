@@ -8,7 +8,7 @@
         "noopstudios/marketingsms-php": "^1.0",
         "illuminate/notifications": "^10.3"
     },
-    "license": "MIT Licence",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Noopstudios\\MarketingSMS\\": "src/"
