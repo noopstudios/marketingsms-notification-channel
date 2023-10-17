@@ -11,7 +11,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Noopstudios\\MarketingSMS\\": "src/"
+            "NotificationChannels\\MarketingSMS\\": "src/"
         }
     },
     "autoload-dev": {
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Noopstudios\\MarketingSMS\\MarketingSMSProvider"
+                "NotificationChannels\\MarketingSMS\\MarketingSMSProvider"
             ]
         }
     }
