@@ -34,7 +34,7 @@ class MarketingSMSChannel
         }
 
         if(! $message instanceof MarketingSMSMessage){
-            throw Exceptions\InvalidConfiguration::configurationNotSet();
+            throw InvalidConfiguration::configurationNotSet();
         }
 
         $response = $this->client->sendMessage([
