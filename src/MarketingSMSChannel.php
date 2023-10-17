@@ -3,7 +3,8 @@
 namespace Noopstudios\MarketingSMS;
 
 use Illuminate\Notifications\Notification;
-use NotificationChannels\MarketingSMS\Exceptions;
+use NotificationChannels\MarketingSMS\Exceptions\InvalidConfiguration;
+use NotificationChannels\MarketingSMS\Exceptions\CouldNotSendNotification;
 use Noopstudios\MarketingSMS\marketingSMS;
 use NotificationsChannels\MarketingSMS\Exceptions\InvalidPhoneNumber;
 
@@ -45,7 +46,7 @@ class MarketingSMSChannel
         ]);
 
         if ($response['success'] != 200) {
-            throw Exceptions\CouldNotSendNotification::marketingSMSError($response->getCleanResponse(), $response->getResponseCode());
+            throw CouldNotSendNotification::marketingSMSError($response->getCleanResponse(), $response->getResponseCode());
         }
     }
 
@@ -67,6 +68,6 @@ class MarketingSMSChannel
             return $notifiable->phones;
         }
 
-        throw Exceptions\CouldNotSendNotification::invalidReceiver();
+        throw CouldNotSendNotification::invalidReceiver();
     }
 }
