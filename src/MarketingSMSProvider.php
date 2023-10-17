@@ -1,6 +1,6 @@
 <?php
 
-namespace Noopstudios\MarketingSMS;
+namespace NotificationChannels\MarketingSMS;
 use Illuminate\Support\ServiceProvider;
 use Noopstudios\MarketingSMS\marketingSMS;
 

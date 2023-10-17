@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationsChannels\MarketingSMS\Exceptions;
+namespace NotificationChannels\MarketingSMS\Exceptions;
 
 use Exception;
 

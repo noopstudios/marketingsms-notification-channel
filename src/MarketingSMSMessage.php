@@ -1,6 +1,6 @@
 <?php
 
-namespace Noopstudios\MarketingSMS;
+namespace NotificationChannels\MarketingSMS;
 
 class MarketingSMSMessage
 {

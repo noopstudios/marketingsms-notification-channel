@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "NotificationChannels\\MarketingSMS\\MarketingSMSProvider"
+                "Noopstudios\\MarketingSMS\\MarketingSMSProvider"
             ]
         }
     }

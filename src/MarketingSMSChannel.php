@@ -1,6 +1,6 @@
 <?php
 
-namespace Noopstudios\MarketingSMS;
+namespace NotificationChannels\MarketingSMS;
 
 use Illuminate\Notifications\Notification;
 use NotificationChannels\MarketingSMS\Exceptions\InvalidConfiguration;
