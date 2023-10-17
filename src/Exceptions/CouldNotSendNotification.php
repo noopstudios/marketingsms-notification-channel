@@ -2,7 +2,9 @@
 
 namespace NotificationChannels\MarketingSMS\Exceptions;
 
-class CouldNotSendNotification extends \Exception
+use Exception;
+
+class CouldNotSendNotification extends Exception
 {
     public static function marketingSMSError(string $message, int $code): self
     {
