@@ -46,7 +46,7 @@ class MarketingSMSChannel
         ]);
 
         if ($response['success'] != 200) {
-            throw CouldNotSendNotification::marketingSMSError($response->getCleanResponse(), $response->getResponseCode());
+            throw CouldNotSendNotification::marketingSMSError($this->client->getCleanResponse(), $this->client->getResponseCode());
         }
     }
 
