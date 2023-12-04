@@ -2151,16 +2151,16 @@
         },
         {
             "name": "noopstudios/marketingsms-php",
-            "version": "1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/noopstudios/marketingsms-php.git",
-                "reference": "ffa2c9f00d4e31e7fa3cbeeb3346009c5298669c"
+                "reference": "a8ceadc569403a10016ec35150f8ba46c7d3d203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/noopstudios/marketingsms-php/zipball/ffa2c9f00d4e31e7fa3cbeeb3346009c5298669c",
-                "reference": "ffa2c9f00d4e31e7fa3cbeeb3346009c5298669c",
+                "url": "https://api.github.com/repos/noopstudios/marketingsms-php/zipball/a8ceadc569403a10016ec35150f8ba46c7d3d203",
+                "reference": "a8ceadc569403a10016ec35150f8ba46c7d3d203",
                 "shasum": ""
             },
             "require": {
@@ -2189,9 +2189,9 @@
             "description": "An easy to use PHP Class for sending SMS with MarketingSMS API.",
             "support": {
                 "issues": "https://github.com/noopstudios/marketingsms-php/issues",
-                "source": "https://github.com/noopstudios/marketingsms-php/tree/1.1"
+                "source": "https://github.com/noopstudios/marketingsms-php/tree/1.1.2"
             },
-            "time": "2023-12-04T16:27:24+00:00"
+            "time": "2023-12-04T17:36:15+00:00"
         },
         {
             "name": "nunomaduro/termwind",
