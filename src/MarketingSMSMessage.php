@@ -51,7 +51,7 @@ class MarketingSMSMessage
         $this->name = $messageDetails['name'];
         $this->message = $messageDetails['message'];
         $this->from = $messageDetails['from'];
-        $this->deliveredAt = $messageDetails['deliveredAt'];
+        $this->deliveredAt = $messageDetails['deliveredAt'] ?? null;
         $this->phones = $messageDetails['phones'];
     }
 
