@@ -16,9 +16,9 @@ class MarketingSMSMessageTest extends TestCase
         $messageDetails = [
             'name' => 'Name',
             'message' => 'message',
-            'from' => '00351968098228',
+            'from' => '00351913909730',
             'deliveredAt' => null,
-            'phones' => '["00351968098228"]'
+            'phones' => '["00351913909730"]'
         ];
         $this->message = new MarketingSMSMessage($messageDetails);
     }
